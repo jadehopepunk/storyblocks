@@ -1,6 +1,6 @@
 // @flow
 import React from 'react'
-import PropTypes from 'prop-types'
+import pluralize from 'pluralize'
 
 type NumLikesProps = {
   /** The total number of likes. */
@@ -11,9 +11,11 @@ type NumLikesProps = {
  * Displays the number of people who like this message, and provides some
  * indication of who some of them are (if they are people you know).
  */
-const NumLikes = ({}: NumLikesProps) => {
+const NumLikes = ({ total }: NumLikesProps) => {
+  if (!total) return null
+
   return (
-    <a href='#'>18 likes</a>
+    <a href='#'>{total} {pluralize('like', total)}</a>
   )
 }
 
