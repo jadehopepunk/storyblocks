@@ -8,7 +8,8 @@
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
     "styleguide": "styleguidist server",
-    "styleguide:build": "styleguidist build"
+    "styleguide:build": "styleguidist build",
+    "lint": "standard"
   },
   "dependencies": {
     "moment": "^2.20.1",
@@ -16,9 +17,12 @@
     "prop-types": "^15.6.0",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
-    "react-scripts": "1.1.0"
+    "react-scripts": "1.1.0",
+    "styled-jss": "^2.1.2"
   },
   "devDependencies": {
+    "babel-eslint": "^7.2.1",
+    "eslint-plugin-flowtype": "^2.41.0",
     "flow-bin": "^0.63.1",
     "react-styleguidist": "^6.1.0",
     "standard-flow": "^1.0.0"

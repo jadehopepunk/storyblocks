@@ -1,5 +1,6 @@
 // @flow
 import React from 'react'
+import styled from 'styled-jss'
 import Avatar from '../Avatar'
 import NameLink from '../NameLink'
 
@@ -10,13 +11,17 @@ type MessageHeaderProps = {
   }
 }
 
+const Container = styled('header')({
+  border: '1px solid red'
+})
+
 const MessageHeader = ({ author }: MessageHeaderProps) => (
-  <header>
+  <Container>
     <Avatar name={author.name} />
-    <div className="name">
+    <div className='name'>
       <NameLink id={author.id} name={author.name} />
     </div>
-  </header>
+  </Container>
 )
 
 export default MessageHeader

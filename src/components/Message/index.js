@@ -4,12 +4,13 @@ import MessageHeader from '../MessageHeader'
 
 type MessageProps = {
   author: {
-    userName: string
+    id: string,
+    name: string
   }
 }
 
 const Message = ({ author }: MessageProps) => (
-  <div className="message">
+  <div className='message'>
     <MessageHeader author={author} />
     <section>
       main section
