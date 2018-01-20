@@ -5,7 +5,7 @@ import MessageHeader from '../MessageHeader'
 import MessageBody from '../MessageBody'
 import MessageFooter from '../MessageFooter'
 
-type MessageProps = {
+export type MessageProps = {
   author: {
     id: string,
     name: string
