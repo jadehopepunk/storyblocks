@@ -14,20 +14,22 @@ type MessageHeaderProps = {
 }
 
 const Container = styled('header')({
-  border: '1px solid blue',
   display: 'flex',
-  flexDirection: 'row'
+  flexDirection: 'row',
+  fontSize: '120%'
 })
 
 const Main = styled('div')({
   flex: 1,
-  border: '1px solid blue',
   marginLeft: 10,
   marginRight: 10
 })
 
+const MainMeta = styled('div')({
+  fontSize: '90%'
+})
+
 const Meta = styled('div')({
-  border: '1px solid red'
 })
 
 const MessageHeader = ({ author, date }: MessageHeaderProps) => (
@@ -35,7 +37,9 @@ const MessageHeader = ({ author, date }: MessageHeaderProps) => (
     <Avatar name={author.name} />
     <Main className='main'>
       <NameLink id={author.id} name={author.name} />
-      <PublishedAt date={date} />
+      <MainMeta>
+        <PublishedAt date={date} />
+      </MainMeta>
     </Main>
     <Meta>
       metadata
