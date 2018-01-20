@@ -1,16 +1,19 @@
 // @flow
 import React from 'react'
 import styled from 'styled-jss'
+import { isEmpty } from 'lodash'
 import Avatar from '../Avatar'
 import NameLink from '../NameLink'
 import PublishedAt from '../PublishedAt'
+import HashTag from '../HashTag'
 
 type MessageHeaderProps = {
   author: {
     id: string,
     name: string
   },
-  date: Date
+  date: Date,
+  channels: Array<string>
 }
 
 const Container = styled('header')({
@@ -32,7 +35,7 @@ const MainMeta = styled('div')({
 const Meta = styled('div')({
 })
 
-const MessageHeader = ({ author, date }: MessageHeaderProps) => (
+const MessageHeader = ({ author, date, channels }: MessageHeaderProps) => (
   <Container>
     <Avatar name={author.name} />
     <Main className='main'>
@@ -42,7 +45,7 @@ const MessageHeader = ({ author, date }: MessageHeaderProps) => (
       </MainMeta>
     </Main>
     <Meta>
-      metadata
+      {!isEmpty(channels) && <HashTag value={channels[0]} />}
     </Meta>
   </Container>
 )
