@@ -1,11 +1,12 @@
+// @flow
 import React from 'react'
 import moment from 'moment'
 
-type PublishedAt = {
-  date: date
+type PublishedAtProps = {
+  date: Date
 }
 
-const PublishedAt = ({ date }: PublishedAt) => {
+const PublishedAt = ({ date }: PublishedAtProps) => {
   const at = moment(date)
   return <div>{at.fromNow()}</div>
 }

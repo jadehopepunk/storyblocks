@@ -15,7 +15,7 @@ const NumLikes = ({ total }: NumLikesProps) => {
   if (!total) return null
 
   return (
-    <a href='#'>{total} {pluralize('like', total)}</a>
+    <div>{total} {pluralize('like', total)}</div>
   )
 }
 

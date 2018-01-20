@@ -1,5 +1,5 @@
 Basic Avatar example:
 
 ```js
-<Avatar />
+<Avatar userName="David Hasselfhoff" />
 ```
