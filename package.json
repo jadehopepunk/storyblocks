@@ -16,7 +16,8 @@
     "eject": "react-scripts eject",
     "styleguide": "styleguidist server",
     "styleguide:build": "styleguidist build",
-    "lint": "standard"
+    "lint": "standard",
+    "prepublish": "babel ./src --out-dir ./lib --source-maps --presets es2015,react"
   },
   "dependencies": {
     "lodash": "^4.17.4",
@@ -30,7 +31,10 @@
     "styled-jss": "^2.1.2"
   },
   "devDependencies": {
+    "babel-cli": "^6.26.0",
     "babel-eslint": "^7.2.1",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
     "eslint-plugin-flowtype": "^2.41.0",
     "flow-bin": "^0.63.1",
     "react-styleguidist": "^6.1.0",
