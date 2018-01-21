@@ -1,7 +1,14 @@
 {
   "name": "storyblocks",
+  "description": "A set of react components to use when experimenting with Patchwork",
   "version": "0.1.0",
-  "private": true,
+  "author": "Craig Ambrose",
+  "homepage": "https://github.com/craigambrose/storyblocks",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/craigambrose/storyblocks.git"
+  },
+  "license": "MIT",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
